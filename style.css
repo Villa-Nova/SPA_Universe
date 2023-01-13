@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+  box-sizing: 0;
+}
+
+ul, a {
+  list-style: none;
+  text-decoration: none;
+
+  color: var(--fc-disabled);
+}
+
+button, 
+a {
+  cursor: pointer;
+}
+
+button a {
+  display: block;
+
+  padding: 1.2rem 3.2rem;
+
+  text-transform: uppercase;
+  color: var(--fc-body);
+}
+
+button a:hover {
+  padding: 1.6rem 3.8rem;
+
+  transition: all .4s;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: var(--ff-all);
+
+  --ff-all: 'Roboto', sans-serif;
+  
+  --fc-disabled: #8d8d8d;
+  --fc-body: #FFFFFF;
+}
+
+body {
+  height: 99vh;
+
+  background-color: #010507;
+  background-image: url(./pages/img/pageHome.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: var(--fc-body);
+  font-family: var(--ff-all);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+header {
+  max-width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 4rem 7.4rem;
+
+  color: var(--fc-disabled);
+}
+
+svg {
+  margin-right: 4.2rem;
+}
+
+nav {
+  min-width: 35%;
+}
+
+ul {
+  display: flex;
+  column-gap: 4.2rem;
+  row-gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+
+  text-align: center;
+}
+
+li {
+  white-space: nowrap;
+}
+
+ul li a {
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 2.2rem;
+}
+
+ul li a:hover {
+  color: var(--fc-body);
+  font-weight: 700;
+}
+
+main {
+  width: 100%;
+  display: grid;
+}
+
+.error {
+  margin: 10.0rem auto 0;
+
+  padding: .2rem;
+  border: .2rem solid var(--fc-body);
+
+  text-align: center;
+}
+
+.error h2 {
+  letter-spacing: .8rem;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.page_home {
+  display: grid;
+  gap: 2.4rem;
+
+  text-align: center;
+}
+
+.page_home h1 {
+  margin-top: 5rem;
+  
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 125%;
+}
+
+.page_home button {
+  justify-self: center;
+
+  background: transparent;
+  background: none;
+  
+  /* padding: 1.2rem 3.2rem; */
+  border: .2rem solid var(--fc-body);
+  border-radius: .5rem;
+
+  transition: all .4s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 .8rem 3.2rem 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur(1.5rem);
+  border-radius: 1.0rem;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+  transition: all;
+  font-weight: bold;
+}
+
+.page_universe,
+.page_explorer {
+  margin-top: 4.3rem;
+  padding: 0 7.4rem;
+}
+
+.page_universe h2,
+.page_explorer h2 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 125%;
+
+  margin-bottom: 1.6rem;
+}
+
+.page_universe p,
+.page_explorer p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 160%;
+  
+  max-width: 64.8rem;
+}
+
+/* media query */
+@media (max-width: 523px) {
+  body {
+    min-width: 32.0rem;
+  }
+
+  .page_home h1 {
+    margin-top: .5rem;
+  }
+
+  .explorer_home {
+    display: block;
+  }
+
+  .page_universe h2,
+  .page_explorer h2 {
+    font-size: 3.5rem;
+  }
+
+  .page_universe p,
+  .page_explorer p {
+    font-size: 1.4;
+  }
+}
+
+.background_explorer {
+  background-image: url("./pages/img/pageExplorer.png");
+}
+
+.background_universe {
+  background-image: url("./pages/img/pageUniverse.png");
+}
